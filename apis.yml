@@ -1,23 +1,63 @@
 aid: miniflux
+
 name: Miniflux
-description: 'Miniflux is a company surfaced via the API Evangelist harvest backlog (source: news) and
-  added to the network as a stub for full-pipeline profiling.'
+
+description: 'Miniflux is an open-source minimalist feed reader focused on simplicity and privacy. It provides a clean web interface, supports self‑hosting via binary, Docker, or packages, and offers a RESTful API for managing feeds, entries, categories, and users. The project emphasizes readability, low resource usage, and no telemetry, making it suitable for personal and small‑team use.'
+
 url: https://raw.githubusercontent.com/api-evangelist/miniflux/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:news
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
-- Company
-apis: []
+- Feed Reader
+- Open Source
+- Self-Hosted
+- Minimalist
+- Privacy
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: X-MCPServerCandidate
+  url: mcp/miniflux-mcp.yml
+- type: SDKs
+  url: packages/miniflux-packages.yml
+- type: Packages
+  url: packages/miniflux-packages.yml
+- type: DomainSecurity
+  url: security/miniflux-domain-security.yml
 - type: Website
   url: https://miniflux.app/
+- type: Documentation
+  url: https://miniflux.app/docs/
+- type: APIReference
+  url: https://miniflux.app/docs/api.html
+- type: GettingStarted
+  url: https://miniflux.app/docs/installation.html
+- type: Support
+  url: https://github.com/miniflux/v2/issues
+- type: GitHubOrganization
+  url: https://github.com/miniflux
+
+apis: []
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
