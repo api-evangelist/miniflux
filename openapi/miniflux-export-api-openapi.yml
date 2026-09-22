@@ -1,0 +1,38 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Export API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Export
+paths:
+  /v1/export:
+    get:
+      operationId: get_v1_export
+      tags:
+      - Export
+      summary: OPML Export
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1ExportResponse'
+components:
+  schemas:
+    GetV1ExportResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: OPML file

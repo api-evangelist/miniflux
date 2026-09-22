@@ -1,0 +1,268 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Entries API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Entries
+paths:
+  /v1/entries:
+    get:
+      operationId: get_v1_entries
+      tags:
+      - Entries
+      summary: Get Entries
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1EntriesResponse'
+    put:
+      operationId: put_v1_entries
+      tags:
+      - Entries
+      summary: Update Entries
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1EntriesRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/entries/1234/bookmark:
+    put:
+      operationId: put_v1_entries_1234_bookmark
+      tags:
+      - Entries
+      summary: Toggle Entry Bookmark
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/entries/888:
+    get:
+      operationId: get_v1_entries_888
+      tags:
+      - Entries
+      summary: Get Entry
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Entries888Response'
+  /v1/entries/ids:
+    get:
+      operationId: get_v1_entries_ids
+      tags:
+      - Entries
+      summary: Get Entry IDs
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1EntriesIdsResponse'
+  /v1/entries/{entryID}:
+    put:
+      operationId: put_v1_entries_entryID
+      tags:
+      - Entries
+      summary: Update Entry
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: entryID
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1EntriesEntryidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV1EntriesEntryidResponse'
+  /v1/entries/{entryID}/fetch-content:
+    get:
+      operationId: get_v1_entries_entryID_fetch_content
+      tags:
+      - Entries
+      summary: Fetch original article
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: entryID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: update_content
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: Whether to replace title and content in database
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1EntriesEntryidFetchContentResponse'
+  /v1/entries/{entryID}/save:
+    post:
+      operationId: post_v1_entries_entryID_save
+      tags:
+      - Entries
+      summary: Save entry to third-party services
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: entryID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+components:
+  schemas:
+    PutV1EntriesEntryidRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+    GetV1EntriesEntryidFetchContentResponse:
+      type: object
+      properties:
+        content:
+          type: string
+    GetV1Entries888Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        feed_id:
+          type: integer
+        title:
+          type: string
+        url:
+          type: string
+        comments_url:
+          type: string
+        author:
+          type: string
+        content:
+          type: string
+        hash:
+          type: string
+        published_at:
+          type: string
+        created_at:
+          type: string
+        status:
+          type: string
+        share_code:
+          type: string
+        starred:
+          type: boolean
+        reading_time:
+          type: integer
+        enclosures:
+          type: string
+        feed:
+          type: object
+    GetV1EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
+    GetV1EntriesIdsResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entry_ids:
+          type: array
+    PutV1EntriesRequest:
+      type: object
+      properties:
+        entry_ids:
+          type: array
+        status:
+          type: string
+        starred:
+          type: boolean
+      required:
+      - entry_ids
+    PutV1EntriesEntryidResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        feed_id:
+          type: integer
+        status:
+          type: string
+        hash:
+          type: string
+        title:
+          type: string
+        url:
+          type: string
+        comments_url:
+          type: string
+        published_at:
+          type: string
+        created_at:
+          type: string
+        changed_at:
+          type: string
+        content:
+          type: string
+        author:
+          type: string
+        share_code:
+          type: string
+        starred:
+          type: boolean
+        reading_time:
+          type: integer
+        enclosures:
+          type: array
+        feed:
+          type: object
+        tags:
+          type: array

@@ -1,38 +1,46 @@
 aid: miniflux
-
 name: Miniflux
-
-description: 'Miniflux is an open-source minimalist feed reader focused on simplicity and privacy. It provides a clean web interface, supports self‑hosting via binary, Docker, or packages, and offers a RESTful API for managing feeds, entries, categories, and users. The project emphasizes readability, low resource usage, and no telemetry, making it suitable for personal and small‑team use.'
-
+description: Miniflux is an open-source minimalist feed reader focused on simplicity and privacy. It provides a clean web interface, supports
+  self‑hosting via binary, Docker, or packages, and offers a RESTful API for managing feeds, entries, categories, and users. The project emphasizes
+  readability, low resource usage, and no telemetry, making it suitable for personal and small‑team use.
 url: https://raw.githubusercontent.com/api-evangelist/miniflux/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:news
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-21'
-
 modified: '2026-09-21'
-
 tags:
+- Feed Reader
+- Open-Source
+- Self-Hosted
+- Minimalist
+- Privacy
+tags_raw:
 - Feed Reader
 - Open Source
 - Self-Hosted
 - Minimalist
 - Privacy
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: JSONLD
+  url: json-ld/miniflux-context.jsonld
+- type: Vocabulary
+  url: vocabulary/miniflux-vocabulary.yml
+- type: DataModel
+  url: data-model/miniflux-data-model.yml
+- type: AgenticAccess
+  url: agentic-access/miniflux-agentic-access.yml
+- type: Spectral
+  url: rules/miniflux-rules.yml
+- type: Conformance
+  url: conformance/miniflux-conformance.yml
 - type: X-MCPServerCandidate
   url: mcp/miniflux-mcp.yml
 - type: SDKs
@@ -53,8 +61,264 @@ common:
   url: https://github.com/miniflux/v2/issues
 - type: GitHubOrganization
   url: https://github.com/miniflux
-
-apis: []
+apis:
+- aid: miniflux:miniflux-api-keys-api
+  name: Miniflux Api Keys API
+  description: The Api Keys API from Miniflux — 2 operation(s) for api keys.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Api Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-api-keys-api-openapi.yml
+- aid: miniflux:miniflux-categories-api
+  name: Miniflux Categories API
+  description: The Categories API from Miniflux — 6 operation(s) for categories.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-categories-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+- aid: miniflux:miniflux-enclosures-api
+  name: Miniflux Enclosures API
+  description: The Enclosures API from Miniflux — 1 operation(s) for enclosures.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Enclosures
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-enclosures-api-openapi.yml
+- aid: miniflux:miniflux-entries-api
+  name: Miniflux Entries API
+  description: The Entries API from Miniflux — 7 operation(s) for entries.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-entries-api-openapi.yml
+- aid: miniflux:miniflux-export-api
+  name: Miniflux Export API
+  description: The Export API from Miniflux — 1 operation(s) for export.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Export
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-export-api-openapi.yml
+- aid: miniflux:miniflux-feeds-api
+  name: Miniflux Feeds API
+  description: The Feeds API from Miniflux — 5 operation(s) for feeds.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Feeds
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-feeds-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-request-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-post-v1-feeds-request-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-feedid-icon-response-schema.json
+- aid: miniflux:miniflux-import-api
+  name: Miniflux Import API
+  description: The Import API from Miniflux — 1 operation(s) for import.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Import
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-import-api-openapi.yml
+- aid: miniflux:miniflux-integrations-api
+  name: Miniflux Integrations API
+  description: The Integrations API from Miniflux — 1 operation(s) for integrations.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-integrations-api-openapi.yml
+- aid: miniflux:miniflux-liveness-api
+  name: Miniflux Liveness API
+  description: The Liveness API from Miniflux — 1 operation(s) for liveness.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Liveness
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-liveness-api-openapi.yml
+- aid: miniflux:miniflux-me-api
+  name: Miniflux Me API
+  description: The Me API from Miniflux — 1 operation(s) for me.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-me-api-openapi.yml
+- aid: miniflux:miniflux-readiness-api
+  name: Miniflux Readiness API
+  description: The Readiness API from Miniflux — 1 operation(s) for readiness.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Readiness
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-readiness-api-openapi.yml
+- aid: miniflux:miniflux-users-api
+  name: Miniflux Users API
+  description: The Users API from Miniflux — 4 operation(s) for users.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-users-api-openapi.yml
+- aid: miniflux:miniflux-version-api
+  name: Miniflux Version API
+  description: The Version API from Miniflux — 2 operation(s) for version.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Version
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-version-api-openapi.yml
+- aid: miniflux:miniflux-discover-api
+  name: Miniflux Discover API
+  description: The Discover API from Miniflux — 1 operation(s) for discover.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Discover
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-discover-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
+- aid: miniflux:miniflux-flush-history-api
+  name: Miniflux Flush History API
+  description: The Flush History API from Miniflux — 1 operation(s) for flush history.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Flush History
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-flush-history-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
+- aid: miniflux:miniflux-healthz-api
+  name: Miniflux Healthz API
+  description: The Healthz API from Miniflux — 1 operation(s) for healthz.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Healthz
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-healthz-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
+- aid: miniflux:miniflux-icons-api
+  name: Miniflux Icons API
+  description: The Icons API from Miniflux — 1 operation(s) for icons.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Icons
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-icons-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
+- aid: miniflux:miniflux-readyz-api
+  name: Miniflux Readyz API
+  description: The Readyz API from Miniflux — 1 operation(s) for readyz.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Readyz
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-readyz-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
+- aid: miniflux:miniflux-health-check-api
+  name: Miniflux Health Check API
+  description: The Health Check API from Miniflux — 1 operation(s) for health check.
+  humanURL: https://miniflux.app/docs/api.html
+  tags:
+  - Health Check
+  properties:
+  - type: OpenAPI
+    url: openapi/miniflux-health-check-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-categories40-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-feeds-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-feeds42-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-put-v1-entries-entryid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/miniflux-get-v1-me-response-schema.json
 x-enrichment:
   date: '2026-09-21'
   status: enriched

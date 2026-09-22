@@ -1,0 +1,83 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Enclosures API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Enclosures
+paths:
+  /v1/enclosures/{enclosureID}:
+    get:
+      operationId: get_v1_enclosures_enclosureID
+      tags:
+      - Enclosures
+      summary: Get Enclosure
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: enclosureID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1EnclosuresEnclosureidResponse'
+    put:
+      operationId: put_v1_enclosures_enclosureID
+      tags:
+      - Enclosures
+      summary: Update Enclosure
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: enclosureID
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1EnclosuresEnclosureidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+components:
+  schemas:
+    PutV1EnclosuresEnclosureidRequest:
+      type: object
+      properties:
+        media_progression:
+          type: integer
+      required:
+      - media_progression
+    GetV1EnclosuresEnclosureidResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        entry_id:
+          type: integer
+        url:
+          type: string
+        mime_type:
+          type: string
+        size:
+          type: integer
+        media_progression:
+          type: integer

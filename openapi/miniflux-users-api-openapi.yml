@@ -1,0 +1,306 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Users API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Users
+paths:
+  /v1/users:
+    get:
+      operationId: get_v1_users
+      tags:
+      - Users
+      summary: Get Users
+      description: Retrieve list of all users (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1UsersResponse'
+    post:
+      operationId: post_v1_users
+      tags:
+      - Users
+      summary: Create User
+      description: Create a new user (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1UsersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1UsersResponse'
+  /v1/users/123/mark-all-as-read:
+    put:
+      operationId: put_v1_users_123_mark_all_as_read
+      tags:
+      - Users
+      summary: Mark User Entries as Read
+      description: Mark all entries for the specified user as read.
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/users/270:
+    delete:
+      operationId: delete_v1_users_270
+      tags:
+      - Users
+      summary: Delete User
+      description: Delete a user (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+    get:
+      operationId: get_v1_users_270
+      tags:
+      - Users
+      summary: Get User
+      description: Fetch a user by ID or username (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Users270Response'
+    put:
+      operationId: put_v1_users_270
+      tags:
+      - Users
+      summary: Update User
+      description: Update an existing user (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1Users270Request'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV1Users270Response'
+  /v1/users/foobar:
+    get:
+      operationId: get_v1_users_foobar
+      tags:
+      - Users
+      summary: Get User
+      description: Fetch a user by ID or username (admin only).
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1UsersFoobarResponse'
+components:
+  schemas:
+    GetV1UsersResponse:
+      type: object
+      properties:
+        users:
+          type: array
+          description: Array of user objects as defined in Get User response.
+    PostV1UsersResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+          description: nullable
+    GetV1UsersFoobarResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        is_admin:
+          type: boolean
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+    PutV1Users270Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+    PutV1Users270Request:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        is_admin:
+          type: boolean
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+    GetV1Users270Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        is_admin:
+          type: boolean
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+    PostV1UsersRequest:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        is_admin:
+          type: boolean
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+      required:
+      - username
+      - password

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/miniflux/main/json-schema/miniflux-get-v1-me-response-schema.json",
+  "title": "GetV1MeResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/miniflux-openapi-generated.yml#/components/schemas/GetV1MeResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "is_admin": {
+      "type": "boolean"
+    },
+    "theme": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "entry_sorting_direction": {
+      "type": "string"
+    },
+    "stylesheet": {
+      "type": "string"
+    },
+    "google_id": {
+      "type": "string"
+    },
+    "openid_connect_id": {
+      "type": "string"
+    },
+    "entries_per_page": {
+      "type": "integer"
+    },
+    "keyboard_shortcuts": {
+      "type": "boolean"
+    },
+    "show_reading_time": {
+      "type": "boolean"
+    },
+    "entry_swipe": {
+      "type": "boolean"
+    },
+    "last_login_at": {
+      "type": "string"
+    }
+  }
+}

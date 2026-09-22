@@ -1,0 +1,59 @@
+{
+  "provider": "miniflux",
+  "sources": [
+    "_ae-authored/miniflux-openapi-generated.yml"
+  ],
+  "outputs": [
+    "miniflux-api-keys-api-openapi.yml",
+    "miniflux-categories-api-openapi.yml",
+    "miniflux-discover-api-openapi.yml",
+    "miniflux-enclosures-api-openapi.yml",
+    "miniflux-entries-api-openapi.yml",
+    "miniflux-export-api-openapi.yml",
+    "miniflux-feeds-api-openapi.yml",
+    "miniflux-flush-history-api-openapi.yml",
+    "miniflux-healthcheck-api-openapi.yml",
+    "miniflux-healthz-api-openapi.yml",
+    "miniflux-icons-api-openapi.yml",
+    "miniflux-import-api-openapi.yml",
+    "miniflux-integrations-api-openapi.yml",
+    "miniflux-liveness-api-openapi.yml",
+    "miniflux-me-api-openapi.yml",
+    "miniflux-readiness-api-openapi.yml",
+    "miniflux-readyz-api-openapi.yml",
+    "miniflux-users-api-openapi.yml",
+    "miniflux-version-api-openapi.yml"
+  ],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "miniflux-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: miniflux-health-check-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 19 total)"
+  ],
+  "skipped": [
+    "miniflux-api-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-discover-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-enclosures-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-entries-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-export-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-feeds-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-flush-history-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-health-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-healthz-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-icons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-import-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-liveness-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-readiness-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-readyz-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "miniflux-version-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}

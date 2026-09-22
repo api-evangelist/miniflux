@@ -1,0 +1,66 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Me API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Me
+paths:
+  /v1/me:
+    get:
+      operationId: get_v1_me
+      tags:
+      - Me
+      summary: Get Current User
+      description: Retrieve the currently authenticated user.
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1MeResponse'
+components:
+  schemas:
+    GetV1MeResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        is_admin:
+          type: boolean
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string

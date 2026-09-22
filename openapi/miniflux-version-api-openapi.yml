@@ -1,0 +1,69 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Version API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Version
+paths:
+  /v1/version:
+    get:
+      operationId: get_v1_version
+      tags:
+      - Version
+      summary: Application version and build information
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1VersionResponse'
+  /version:
+    get:
+      operationId: get_version
+      tags:
+      - Version
+      summary: Application version
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVersionResponse'
+components:
+  schemas:
+    GetVersionResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: 2.0.22
+    GetV1VersionResponse:
+      type: object
+      properties:
+        version:
+          type: string
+        commit:
+          type: string
+        build_date:
+          type: string
+        go_version:
+          type: string
+        compiler:
+          type: string
+        arch:
+          type: string
+        os:
+          type: string

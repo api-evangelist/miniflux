@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/miniflux/main/json-schema/miniflux-get-v1-categories40-feeds-response-schema.json",
+  "title": "GetV1Categories40FeedsResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/miniflux-openapi-generated.yml#/components/schemas/GetV1Categories40FeedsResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "site_url": {
+      "type": "string"
+    },
+    "feed_url": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "etag_header": {
+      "type": "string"
+    },
+    "last_modified_header": {
+      "type": "string"
+    },
+    "parsing_error_message": {
+      "type": "string"
+    },
+    "parsing_error_count": {
+      "type": "integer"
+    },
+    "scraper_rules": {
+      "type": "string"
+    },
+    "rewrite_rules": {
+      "type": "string"
+    },
+    "crawler": {
+      "type": "boolean"
+    },
+    "blocklist_rules": {
+      "type": "string"
+    },
+    "keeplist_rules": {
+      "type": "string"
+    },
+    "user_agent": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "ignore_http_cache": {
+      "type": "boolean"
+    },
+    "fetch_via_proxy": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "object"
+    },
+    "icon": {
+      "type": "object"
+    }
+  }
+}

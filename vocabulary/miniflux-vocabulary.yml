@@ -1,0 +1,305 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/miniflux-api-keys-api-openapi.yml
+- openapi/miniflux-categories-api-openapi.yml
+- openapi/miniflux-discover-api-openapi.yml
+- openapi/miniflux-enclosures-api-openapi.yml
+- openapi/miniflux-entries-api-openapi.yml
+vocabulary:
+  name: Miniflux Domain Vocabulary
+  description: 'Terms declared by Miniflux''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-22'
+  terms:
+  - term: PostV1ApiKeysRequest
+    definition: 'Object declared by the contract with fields: description.'
+    tags:
+    - Object
+    source: openapi/miniflux-api-keys-api-openapi.yml#/components/schemas/PostV1ApiKeysRequest
+  - term: GetV1ApiKeysResponse
+    definition: 'Object declared by the contract with fields: api_keys.'
+    tags:
+    - Object
+    source: openapi/miniflux-api-keys-api-openapi.yml#/components/schemas/GetV1ApiKeysResponse
+  - term: PostV1ApiKeysResponse
+    definition: 'Object declared by the contract with fields: id, user_id, description, token, created_at, last_used_at.'
+    tags:
+    - Object
+    source: openapi/miniflux-api-keys-api-openapi.yml#/components/schemas/PostV1ApiKeysResponse
+  - term: PutV1Categories802Response
+    definition: 'Object declared by the contract with fields: id, user_id, title, hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PutV1Categories802Response
+  - term: GetV1CategoriesResponse
+    definition: 'Object declared by the contract with fields: title, user_id, id, hide_globally, feed_count, total_unread.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/GetV1CategoriesResponse
+  - term: PostV1CategoriesRequest
+    definition: 'Object declared by the contract with fields: title, hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PostV1CategoriesRequest
+  - term: PostV1CategoriesResponse
+    definition: 'Object declared by the contract with fields: id, user_id, title, hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PostV1CategoriesResponse
+  - term: PutV1Categories123Request
+    definition: 'Object declared by the contract with fields: hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PutV1Categories123Request
+  - term: GetV1Categories40FeedsResponse
+    definition: 'Object declared by the contract with fields: id, user_id, title, site_url, feed_url, checked_at, etag_header, last_modified_header,
+      parsing_error_message, parsing_error_count, scraper_rules, rewrite_rules. (11 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/GetV1Categories40FeedsResponse
+  - term: GetV1Categories22EntriesResponse
+    definition: 'Object declared by the contract with fields: total, entries.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/GetV1Categories22EntriesResponse
+  - term: PutV1Categories802Request
+    definition: 'Object declared by the contract with fields: title, hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PutV1Categories802Request
+  - term: PutV1Categories123Response
+    definition: 'Object declared by the contract with fields: id, user_id, title, hide_globally.'
+    tags:
+    - Object
+    source: openapi/miniflux-categories-api-openapi.yml#/components/schemas/PutV1Categories123Response
+  - term: PostV1DiscoverResponse
+    definition: 'Object declared by the contract with fields: url, title, type.'
+    tags:
+    - Object
+    source: openapi/miniflux-discover-api-openapi.yml#/components/schemas/PostV1DiscoverResponse
+  - term: PostV1DiscoverRequest
+    definition: 'Object declared by the contract with fields: url, username, password, user_agent, fetch_via_proxy.'
+    tags:
+    - Object
+    source: openapi/miniflux-discover-api-openapi.yml#/components/schemas/PostV1DiscoverRequest
+  - term: PutV1EnclosuresEnclosureidRequest
+    definition: 'Object declared by the contract with fields: media_progression.'
+    tags:
+    - Object
+    source: openapi/miniflux-enclosures-api-openapi.yml#/components/schemas/PutV1EnclosuresEnclosureidRequest
+  - term: GetV1EnclosuresEnclosureidResponse
+    definition: 'Object declared by the contract with fields: id, user_id, entry_id, url, mime_type, size, media_progression.'
+    tags:
+    - Object
+    source: openapi/miniflux-enclosures-api-openapi.yml#/components/schemas/GetV1EnclosuresEnclosureidResponse
+  - term: PutV1EntriesRequest
+    definition: 'Object declared by the contract with fields: entry_ids, status, starred.'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/PutV1EntriesRequest
+  - term: GetV1Entries888Response
+    definition: 'Object declared by the contract with fields: id, user_id, feed_id, title, url, comments_url, author, content, hash, published_at,
+      created_at, status. (5 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/GetV1Entries888Response
+  - term: GetV1EntriesResponse
+    definition: 'Object declared by the contract with fields: total, entries.'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/GetV1EntriesResponse
+  - term: PutV1EntriesEntryidResponse
+    definition: 'Object declared by the contract with fields: id, user_id, feed_id, status, hash, title, url, comments_url, published_at, created_at,
+      changed_at, content. (7 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/PutV1EntriesEntryidResponse
+  - term: PutV1EntriesEntryidRequest
+    definition: 'Object declared by the contract with fields: title, content.'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/PutV1EntriesEntryidRequest
+  - term: GetV1EntriesIdsResponse
+    definition: 'Object declared by the contract with fields: total, entry_ids.'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/GetV1EntriesIdsResponse
+  - term: GetV1EntriesEntryidFetchContentResponse
+    definition: 'Object declared by the contract with fields: content.'
+    tags:
+    - Object
+    source: openapi/miniflux-entries-api-openapi.yml#/components/schemas/GetV1EntriesEntryidFetchContentResponse
+  - term: GetV1ExportResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-export-api-openapi.yml#/components/schemas/GetV1ExportResponse
+  - term: GetV1Feeds42Response
+    definition: 'Object declared by the contract with fields: id, user_id, title, site_url, feed_url, checked_at, etag_header, last_modified_header,
+      parsing_error_message, parsing_error_count, scraper_rules, rewrite_rules. (11 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1Feeds42Response
+  - term: GetV1FeedsCountersResponse
+    definition: 'Object declared by the contract with fields: reads, unreads.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1FeedsCountersResponse
+  - term: PostFeedsFeedidEntriesImportResponse
+    definition: 'Object declared by the contract with fields: id.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PostFeedsFeedidEntriesImportResponse
+  - term: GetV1FeedsResponse
+    definition: 'Object declared by the contract with fields: id, user_id, title, site_url, feed_url, checked_at, etag_header, last_modified_header,
+      parsing_error_message, parsing_error_count, scraper_rules, rewrite_rules. (11 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1FeedsResponse
+  - term: PutV1Feeds42Response
+    definition: 'Object declared by the contract with fields: id, user_id, title, site_url, feed_url, checked_at, etag_header, last_modified_header,
+      parsing_error_message, parsing_error_count, scraper_rules, rewrite_rules. (11 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PutV1Feeds42Response
+  - term: PostFeedsFeedidEntriesImportRequest
+    definition: 'Object declared by the contract with fields: title, url, author, content, published_at, status, starred, tags, external_id, comments_url.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PostFeedsFeedidEntriesImportRequest
+  - term: GetV1FeedsFeedidIconResponse
+    definition: 'Object declared by the contract with fields: id, data, mime_type.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1FeedsFeedidIconResponse
+  - term: GetV1Feeds42EntriesResponse
+    definition: 'Object declared by the contract with fields: total, entries.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1Feeds42EntriesResponse
+  - term: PostV1FeedsRequest
+    definition: 'Object declared by the contract with fields: feed_url, category_id, username, password, crawler, user_agent, scraper_rules, rewrite_rules,
+      blocklist_rules, keeplist_rules, disabled, ignore_http_cache. (1 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PostV1FeedsRequest
+  - term: GetV1Feeds42Entries888Response
+    definition: 'Object declared by the contract with fields: id, user_id, feed_id, title, url, comments_url, author, content, hash, published_at,
+      created_at, status. (5 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/GetV1Feeds42Entries888Response
+  - term: PostV1FeedsResponse
+    definition: 'Object declared by the contract with fields: feed_id.'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PostV1FeedsResponse
+  - term: PutV1Feeds42Request
+    definition: 'Object declared by the contract with fields: title, category_id, feed_url, site_url, scraper_rules, rewrite_rules, blocklist_rules,
+      keeplist_rules, crawler, user_agent, username, password. (3 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-feeds-api-openapi.yml#/components/schemas/PutV1Feeds42Request
+  - term: GetHealthcheckResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-health-check-api-openapi.yml#/components/schemas/GetHealthcheckResponse
+  - term: GetHealthzResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-healthz-api-openapi.yml#/components/schemas/GetHealthzResponse
+  - term: GetV1IconsIconidResponse
+    definition: 'Object declared by the contract with fields: id, data, mime_type.'
+    tags:
+    - Object
+    source: openapi/miniflux-icons-api-openapi.yml#/components/schemas/GetV1IconsIconidResponse
+  - term: PostV1ImportResponse
+    definition: 'Object declared by the contract with fields: message.'
+    tags:
+    - Object
+    source: openapi/miniflux-import-api-openapi.yml#/components/schemas/PostV1ImportResponse
+  - term: PostV1ImportRequest
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-import-api-openapi.yml#/components/schemas/PostV1ImportRequest
+  - term: GetIntegrationsStatusResponse
+    definition: 'Object declared by the contract with fields: has_integrations.'
+    tags:
+    - Object
+    source: openapi/miniflux-integrations-api-openapi.yml#/components/schemas/GetIntegrationsStatusResponse
+  - term: GetLivenessResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-liveness-api-openapi.yml#/components/schemas/GetLivenessResponse
+  - term: GetV1MeResponse
+    definition: 'Object declared by the contract with fields: id, username, is_admin, theme, language, timezone, entry_sorting_direction, stylesheet,
+      google_id, openid_connect_id, entries_per_page, keyboard_shortcuts. (3 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-me-api-openapi.yml#/components/schemas/GetV1MeResponse
+  - term: GetReadinessResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-readiness-api-openapi.yml#/components/schemas/GetReadinessResponse
+  - term: GetReadyzResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-readyz-api-openapi.yml#/components/schemas/GetReadyzResponse
+  - term: PutV1Users270Request
+    definition: 'Object declared by the contract with fields: username, password, theme, language, timezone, entry_sorting_direction, stylesheet,
+      google_id, openid_connect_id, entries_per_page, is_admin, keyboard_shortcuts. (2 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/PutV1Users270Request
+  - term: GetV1UsersResponse
+    definition: 'Object declared by the contract with fields: users.'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/GetV1UsersResponse
+  - term: PostV1UsersResponse
+    definition: 'Object declared by the contract with fields: id, username, theme, language, timezone, entry_sorting_direction, stylesheet, google_id,
+      openid_connect_id, entries_per_page, keyboard_shortcuts, show_reading_time. (2 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/PostV1UsersResponse
+  - term: PostV1UsersRequest
+    definition: 'Object declared by the contract with fields: username, password, is_admin, google_id, openid_connect_id.'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/PostV1UsersRequest
+  - term: GetV1Users270Response
+    definition: 'Object declared by the contract with fields: id, username, is_admin, theme, language, timezone, entry_sorting_direction, stylesheet,
+      google_id, openid_connect_id, entries_per_page, keyboard_shortcuts. (3 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/GetV1Users270Response
+  - term: PutV1Users270Response
+    definition: 'Object declared by the contract with fields: id, username, theme, language, timezone, entry_sorting_direction, stylesheet, google_id,
+      openid_connect_id, entries_per_page, keyboard_shortcuts, show_reading_time. (2 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/PutV1Users270Response
+  - term: GetV1UsersFoobarResponse
+    definition: 'Object declared by the contract with fields: id, username, is_admin, theme, language, timezone, entry_sorting_direction, stylesheet,
+      google_id, openid_connect_id, entries_per_page, keyboard_shortcuts. (3 more)'
+    tags:
+    - Object
+    source: openapi/miniflux-users-api-openapi.yml#/components/schemas/GetV1UsersFoobarResponse
+  - term: GetV1VersionResponse
+    definition: 'Object declared by the contract with fields: version, commit, build_date, go_version, compiler, arch, os.'
+    tags:
+    - Object
+    source: openapi/miniflux-version-api-openapi.yml#/components/schemas/GetV1VersionResponse
+  - term: GetVersionResponse
+    definition: 'Object declared by the contract with fields: body.'
+    tags:
+    - Object
+    source: openapi/miniflux-version-api-openapi.yml#/components/schemas/GetVersionResponse

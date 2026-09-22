@@ -1,0 +1,91 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Api Keys API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: API Keys
+paths:
+  /v1/api-keys:
+    get:
+      operationId: get_v1_api_keys
+      tags:
+      - API Keys
+      summary: Get API Keys
+      description: List all API keys for the authenticated user.
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1ApiKeysResponse'
+    post:
+      operationId: post_v1_api_keys
+      tags:
+      - API Keys
+      summary: Create API Key
+      description: Create a new API key.
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1ApiKeysRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1ApiKeysResponse'
+  /v1/api-keys/1:
+    delete:
+      operationId: delete_v1_api_keys_1
+      tags:
+      - API Keys
+      summary: Delete API Key
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+components:
+  schemas:
+    GetV1ApiKeysResponse:
+      type: object
+      properties:
+        api_keys:
+          type: array
+          description: Array of API key objects with id, user_id, description, token, created_at, last_used_at.
+    PostV1ApiKeysRequest:
+      type: object
+      properties:
+        description:
+          type: string
+      required:
+      - description
+    PostV1ApiKeysResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        description:
+          type: string
+        token:
+          type: string
+        created_at:
+          type: string
+        last_used_at:
+          type: string

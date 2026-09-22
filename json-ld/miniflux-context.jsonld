@@ -1,0 +1,402 @@
+{
+  "@context": {
+    "@vocab": "https://miniflux.app/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "miniflux": "https://miniflux.app/schema#",
+    "PostFeedsFeedidEntriesImportRequest": "miniflux:PostFeedsFeedidEntriesImportRequest",
+    "title": {
+      "@id": "miniflux:title",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "miniflux:url",
+      "@type": "xsd:string"
+    },
+    "author": {
+      "@id": "miniflux:author",
+      "@type": "xsd:string"
+    },
+    "content": {
+      "@id": "miniflux:content",
+      "@type": "xsd:string"
+    },
+    "published_at": {
+      "@id": "miniflux:published_at",
+      "@type": "xsd:integer"
+    },
+    "status": {
+      "@id": "miniflux:status",
+      "@type": "xsd:string"
+    },
+    "starred": {
+      "@id": "miniflux:starred",
+      "@type": "xsd:boolean"
+    },
+    "tags": {
+      "@id": "miniflux:tags",
+      "@container": "@list"
+    },
+    "external_id": {
+      "@id": "miniflux:external_id",
+      "@type": "xsd:string"
+    },
+    "comments_url": {
+      "@id": "miniflux:comments_url",
+      "@type": "xsd:string"
+    },
+    "PostFeedsFeedidEntriesImportResponse": "miniflux:PostFeedsFeedidEntriesImportResponse",
+    "id": {
+      "@id": "miniflux:id",
+      "@type": "xsd:integer"
+    },
+    "GetHealthcheckResponse": "miniflux:GetHealthcheckResponse",
+    "body": {
+      "@id": "miniflux:body",
+      "@type": "xsd:string"
+    },
+    "GetHealthzResponse": "miniflux:GetHealthzResponse",
+    "GetIntegrationsStatusResponse": "miniflux:GetIntegrationsStatusResponse",
+    "has_integrations": {
+      "@id": "miniflux:has_integrations",
+      "@type": "xsd:boolean"
+    },
+    "GetLivenessResponse": "miniflux:GetLivenessResponse",
+    "GetReadinessResponse": "miniflux:GetReadinessResponse",
+    "GetReadyzResponse": "miniflux:GetReadyzResponse",
+    "GetV1ApiKeysResponse": "miniflux:GetV1ApiKeysResponse",
+    "api_keys": {
+      "@id": "miniflux:api_keys",
+      "@container": "@list"
+    },
+    "PostV1ApiKeysRequest": "miniflux:PostV1ApiKeysRequest",
+    "description": {
+      "@id": "miniflux:description",
+      "@type": "xsd:string"
+    },
+    "PostV1ApiKeysResponse": "miniflux:PostV1ApiKeysResponse",
+    "user_id": {
+      "@id": "miniflux:user_id",
+      "@type": "xsd:integer"
+    },
+    "token": {
+      "@id": "miniflux:token",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "miniflux:created_at",
+      "@type": "xsd:string"
+    },
+    "last_used_at": {
+      "@id": "miniflux:last_used_at",
+      "@type": "xsd:string"
+    },
+    "GetV1CategoriesResponse": "miniflux:GetV1CategoriesResponse",
+    "hide_globally": {
+      "@id": "miniflux:hide_globally",
+      "@type": "xsd:boolean"
+    },
+    "feed_count": {
+      "@id": "miniflux:feed_count",
+      "@type": "xsd:integer"
+    },
+    "total_unread": {
+      "@id": "miniflux:total_unread",
+      "@type": "xsd:integer"
+    },
+    "PostV1CategoriesRequest": "miniflux:PostV1CategoriesRequest",
+    "PostV1CategoriesResponse": "miniflux:PostV1CategoriesResponse",
+    "PutV1Categories123Request": "miniflux:PutV1Categories123Request",
+    "PutV1Categories123Response": "miniflux:PutV1Categories123Response",
+    "GetV1Categories22EntriesResponse": "miniflux:GetV1Categories22EntriesResponse",
+    "total": {
+      "@id": "miniflux:total",
+      "@type": "xsd:integer"
+    },
+    "entries": {
+      "@id": "miniflux:entries",
+      "@container": "@list"
+    },
+    "GetV1Categories40FeedsResponse": "miniflux:GetV1Categories40FeedsResponse",
+    "site_url": {
+      "@id": "miniflux:site_url",
+      "@type": "xsd:string"
+    },
+    "feed_url": {
+      "@id": "miniflux:feed_url",
+      "@type": "xsd:string"
+    },
+    "checked_at": {
+      "@id": "miniflux:checked_at",
+      "@type": "xsd:string"
+    },
+    "etag_header": {
+      "@id": "miniflux:etag_header",
+      "@type": "xsd:string"
+    },
+    "last_modified_header": {
+      "@id": "miniflux:last_modified_header",
+      "@type": "xsd:string"
+    },
+    "parsing_error_message": {
+      "@id": "miniflux:parsing_error_message",
+      "@type": "xsd:string"
+    },
+    "parsing_error_count": {
+      "@id": "miniflux:parsing_error_count",
+      "@type": "xsd:integer"
+    },
+    "scraper_rules": {
+      "@id": "miniflux:scraper_rules",
+      "@type": "xsd:string"
+    },
+    "rewrite_rules": {
+      "@id": "miniflux:rewrite_rules",
+      "@type": "xsd:string"
+    },
+    "crawler": {
+      "@id": "miniflux:crawler",
+      "@type": "xsd:boolean"
+    },
+    "blocklist_rules": {
+      "@id": "miniflux:blocklist_rules",
+      "@type": "xsd:string"
+    },
+    "keeplist_rules": {
+      "@id": "miniflux:keeplist_rules",
+      "@type": "xsd:string"
+    },
+    "user_agent": {
+      "@id": "miniflux:user_agent",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "miniflux:username",
+      "@type": "xsd:string"
+    },
+    "password": {
+      "@id": "miniflux:password",
+      "@type": "xsd:string"
+    },
+    "disabled": {
+      "@id": "miniflux:disabled",
+      "@type": "xsd:boolean"
+    },
+    "ignore_http_cache": {
+      "@id": "miniflux:ignore_http_cache",
+      "@type": "xsd:boolean"
+    },
+    "fetch_via_proxy": {
+      "@id": "miniflux:fetch_via_proxy",
+      "@type": "xsd:boolean"
+    },
+    "category": {
+      "@id": "miniflux:category"
+    },
+    "icon": {
+      "@id": "miniflux:icon"
+    },
+    "PutV1Categories802Request": "miniflux:PutV1Categories802Request",
+    "PutV1Categories802Response": "miniflux:PutV1Categories802Response",
+    "PostV1DiscoverRequest": "miniflux:PostV1DiscoverRequest",
+    "PostV1DiscoverResponse": "miniflux:PostV1DiscoverResponse",
+    "type": {
+      "@id": "miniflux:type",
+      "@type": "xsd:string"
+    },
+    "GetV1EnclosuresEnclosureidResponse": "miniflux:GetV1EnclosuresEnclosureidResponse",
+    "entry_id": {
+      "@id": "miniflux:entry_id",
+      "@type": "xsd:integer"
+    },
+    "mime_type": {
+      "@id": "miniflux:mime_type",
+      "@type": "xsd:string"
+    },
+    "size": {
+      "@id": "miniflux:size",
+      "@type": "xsd:integer"
+    },
+    "media_progression": {
+      "@id": "miniflux:media_progression",
+      "@type": "xsd:integer"
+    },
+    "PutV1EnclosuresEnclosureidRequest": "miniflux:PutV1EnclosuresEnclosureidRequest",
+    "GetV1EntriesResponse": "miniflux:GetV1EntriesResponse",
+    "PutV1EntriesRequest": "miniflux:PutV1EntriesRequest",
+    "entry_ids": {
+      "@id": "miniflux:entry_ids",
+      "@container": "@list"
+    },
+    "GetV1Entries888Response": "miniflux:GetV1Entries888Response",
+    "feed_id": {
+      "@id": "miniflux:feed_id",
+      "@type": "xsd:integer"
+    },
+    "hash": {
+      "@id": "miniflux:hash",
+      "@type": "xsd:string"
+    },
+    "share_code": {
+      "@id": "miniflux:share_code",
+      "@type": "xsd:string"
+    },
+    "reading_time": {
+      "@id": "miniflux:reading_time",
+      "@type": "xsd:integer"
+    },
+    "enclosures": {
+      "@id": "miniflux:enclosures",
+      "@type": "xsd:string"
+    },
+    "feed": {
+      "@id": "miniflux:feed"
+    },
+    "GetV1EntriesIdsResponse": "miniflux:GetV1EntriesIdsResponse",
+    "PutV1EntriesEntryidRequest": "miniflux:PutV1EntriesEntryidRequest",
+    "PutV1EntriesEntryidResponse": "miniflux:PutV1EntriesEntryidResponse",
+    "changed_at": {
+      "@id": "miniflux:changed_at",
+      "@type": "xsd:string"
+    },
+    "GetV1EntriesEntryidFetchContentResponse": "miniflux:GetV1EntriesEntryidFetchContentResponse",
+    "GetV1ExportResponse": "miniflux:GetV1ExportResponse",
+    "GetV1FeedsResponse": "miniflux:GetV1FeedsResponse",
+    "PostV1FeedsRequest": "miniflux:PostV1FeedsRequest",
+    "category_id": {
+      "@id": "miniflux:category_id",
+      "@type": "xsd:integer"
+    },
+    "PostV1FeedsResponse": "miniflux:PostV1FeedsResponse",
+    "GetV1Feeds42Response": "miniflux:GetV1Feeds42Response",
+    "PutV1Feeds42Request": "miniflux:PutV1Feeds42Request",
+    "PutV1Feeds42Response": "miniflux:PutV1Feeds42Response",
+    "GetV1Feeds42EntriesResponse": "miniflux:GetV1Feeds42EntriesResponse",
+    "GetV1Feeds42Entries888Response": "miniflux:GetV1Feeds42Entries888Response",
+    "GetV1FeedsCountersResponse": "miniflux:GetV1FeedsCountersResponse",
+    "reads": {
+      "@id": "miniflux:reads"
+    },
+    "unreads": {
+      "@id": "miniflux:unreads"
+    },
+    "GetV1FeedsFeedidIconResponse": "miniflux:GetV1FeedsFeedidIconResponse",
+    "data": {
+      "@id": "miniflux:data",
+      "@type": "xsd:string"
+    },
+    "GetV1IconsIconidResponse": "miniflux:GetV1IconsIconidResponse",
+    "PostV1ImportRequest": "miniflux:PostV1ImportRequest",
+    "PostV1ImportResponse": "miniflux:PostV1ImportResponse",
+    "message": {
+      "@id": "miniflux:message",
+      "@type": "xsd:string"
+    },
+    "GetV1MeResponse": "miniflux:GetV1MeResponse",
+    "is_admin": {
+      "@id": "miniflux:is_admin",
+      "@type": "xsd:boolean"
+    },
+    "theme": {
+      "@id": "miniflux:theme",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "miniflux:language",
+      "@type": "xsd:string"
+    },
+    "timezone": {
+      "@id": "miniflux:timezone",
+      "@type": "xsd:string"
+    },
+    "entry_sorting_direction": {
+      "@id": "miniflux:entry_sorting_direction",
+      "@type": "xsd:string"
+    },
+    "stylesheet": {
+      "@id": "miniflux:stylesheet",
+      "@type": "xsd:string"
+    },
+    "google_id": {
+      "@id": "miniflux:google_id",
+      "@type": "xsd:string"
+    },
+    "openid_connect_id": {
+      "@id": "miniflux:openid_connect_id",
+      "@type": "xsd:string"
+    },
+    "entries_per_page": {
+      "@id": "miniflux:entries_per_page",
+      "@type": "xsd:integer"
+    },
+    "keyboard_shortcuts": {
+      "@id": "miniflux:keyboard_shortcuts",
+      "@type": "xsd:boolean"
+    },
+    "show_reading_time": {
+      "@id": "miniflux:show_reading_time",
+      "@type": "xsd:boolean"
+    },
+    "entry_swipe": {
+      "@id": "miniflux:entry_swipe",
+      "@type": "xsd:boolean"
+    },
+    "last_login_at": {
+      "@id": "miniflux:last_login_at",
+      "@type": "xsd:string"
+    },
+    "GetV1UsersResponse": "miniflux:GetV1UsersResponse",
+    "users": {
+      "@id": "miniflux:users",
+      "@container": "@list"
+    },
+    "PostV1UsersRequest": "miniflux:PostV1UsersRequest",
+    "PostV1UsersResponse": "miniflux:PostV1UsersResponse",
+    "GetV1Users270Response": "miniflux:GetV1Users270Response",
+    "PutV1Users270Request": "miniflux:PutV1Users270Request",
+    "PutV1Users270Response": "miniflux:PutV1Users270Response",
+    "GetV1UsersFoobarResponse": "miniflux:GetV1UsersFoobarResponse",
+    "GetV1VersionResponse": "miniflux:GetV1VersionResponse",
+    "version": {
+      "@id": "miniflux:version",
+      "@type": "xsd:string"
+    },
+    "commit": {
+      "@id": "miniflux:commit",
+      "@type": "xsd:string"
+    },
+    "build_date": {
+      "@id": "miniflux:build_date",
+      "@type": "xsd:string"
+    },
+    "go_version": {
+      "@id": "miniflux:go_version",
+      "@type": "xsd:string"
+    },
+    "compiler": {
+      "@id": "miniflux:compiler",
+      "@type": "xsd:string"
+    },
+    "arch": {
+      "@id": "miniflux:arch",
+      "@type": "xsd:string"
+    },
+    "os": {
+      "@id": "miniflux:os",
+      "@type": "xsd:string"
+    },
+    "GetVersionResponse": "miniflux:GetVersionResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Miniflux API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Miniflux's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/miniflux-api-keys-api-openapi.yml, openapi/miniflux-categories-api-openapi.yml, openapi/miniflux-enclosures-api-openapi.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/miniflux-api-keys-api-openapi.yml",
+    "openapi/miniflux-categories-api-openapi.yml",
+    "openapi/miniflux-enclosures-api-openapi.yml",
+    "openapi/miniflux-entries-api-openapi.yml",
+    "openapi/miniflux-export-api-openapi.yml"
+  ]
+}

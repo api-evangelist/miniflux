@@ -1,0 +1,520 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Feeds API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Feeds
+paths:
+  /feeds/{feedID}/entries/import:
+    post:
+      operationId: post_feeds_feedID_entries_import
+      tags:
+      - Feeds
+      summary: Import Entry
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: feedID
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostFeedsFeedidEntriesImportRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostFeedsFeedidEntriesImportResponse'
+  /v1/feeds:
+    get:
+      operationId: get_v1_feeds
+      tags:
+      - Feeds
+      summary: Get Feeds
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1FeedsResponse'
+    post:
+      operationId: post_v1_feeds
+      tags:
+      - Feeds
+      summary: Create Feed
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1FeedsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1FeedsResponse'
+  /v1/feeds/123/mark-all-as-read:
+    put:
+      operationId: put_v1_feeds_123_mark_all_as_read
+      tags:
+      - Feeds
+      summary: Mark Feed Entries as Read
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/feeds/42:
+    delete:
+      operationId: delete_v1_feeds_42
+      tags:
+      - Feeds
+      summary: Remove Feed
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+    get:
+      operationId: get_v1_feeds_42
+      tags:
+      - Feeds
+      summary: Get Feed
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Feeds42Response'
+    put:
+      operationId: put_v1_feeds_42
+      tags:
+      - Feeds
+      summary: Update Feed
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1Feeds42Request'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV1Feeds42Response'
+  /v1/feeds/42/entries:
+    get:
+      operationId: get_v1_feeds_42_entries
+      tags:
+      - Feeds
+      summary: Get Feed Entries
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Feeds42EntriesResponse'
+  /v1/feeds/42/entries/888:
+    get:
+      operationId: get_v1_feeds_42_entries_888
+      tags:
+      - Feeds
+      summary: Get Feed Entry
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Feeds42Entries888Response'
+  /v1/feeds/42/refresh:
+    put:
+      operationId: put_v1_feeds_42_refresh
+      tags:
+      - Feeds
+      summary: Refresh Feed
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/feeds/counters:
+    get:
+      operationId: get_v1_feeds_counters
+      tags:
+      - Feeds
+      summary: Fetch Read/Unread Counters
+      description: Retrieve read and unread counters per feed.
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1FeedsCountersResponse'
+  /v1/feeds/refresh:
+    put:
+      operationId: put_v1_feeds_refresh
+      tags:
+      - Feeds
+      summary: Refresh all Feeds
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/feeds/{feedID}/icon:
+    get:
+      operationId: get_v1_feeds_feedID_icon
+      tags:
+      - Feeds
+      summary: Get Feed Icon By Feed ID
+      x-source: https://miniflux.app/docs/api.html
+      parameters:
+      - name: feedID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1FeedsFeedidIconResponse'
+components:
+  schemas:
+    GetV1Feeds42Entries888Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        feed_id:
+          type: integer
+        title:
+          type: string
+        url:
+          type: string
+        comments_url:
+          type: string
+        author:
+          type: string
+        content:
+          type: string
+        hash:
+          type: string
+        published_at:
+          type: string
+        created_at:
+          type: string
+        status:
+          type: string
+        share_code:
+          type: string
+        starred:
+          type: boolean
+        reading_time:
+          type: integer
+        enclosures:
+          type: string
+        feed:
+          type: object
+    GetV1FeedsCountersResponse:
+      type: object
+      properties:
+        reads:
+          type: object
+          description: Map of feed ID to read count
+        unreads:
+          type: object
+          description: Map of feed ID to unread count
+    PostV1FeedsRequest:
+      type: object
+      properties:
+        feed_url:
+          type: string
+        category_id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string
+        crawler:
+          type: boolean
+        user_agent:
+          type: string
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+      required:
+      - feed_url
+    PostFeedsFeedidEntriesImportRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        author:
+          type: string
+        content:
+          type: string
+        published_at:
+          type: integer
+        status:
+          type: string
+        starred:
+          type: boolean
+        tags:
+          type: array
+        external_id:
+          type: string
+        comments_url:
+          type: string
+      required:
+      - url
+    PostV1FeedsResponse:
+      type: object
+      properties:
+        feed_id:
+          type: integer
+    PutV1Feeds42Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        site_url:
+          type: string
+        feed_url:
+          type: string
+        checked_at:
+          type: string
+        etag_header:
+          type: string
+        last_modified_header:
+          type: string
+        parsing_error_message:
+          type: string
+        parsing_error_count:
+          type: integer
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        crawler:
+          type: boolean
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        user_agent:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+        category:
+          type: object
+        icon:
+          type: object
+    GetV1FeedsResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        site_url:
+          type: string
+        feed_url:
+          type: string
+        checked_at:
+          type: string
+        etag_header:
+          type: string
+        last_modified_header:
+          type: string
+        parsing_error_message:
+          type: string
+        parsing_error_count:
+          type: integer
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        crawler:
+          type: boolean
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        user_agent:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+        category:
+          type: object
+        icon:
+          type: object
+    GetV1FeedsFeedidIconResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        data:
+          type: string
+        mime_type:
+          type: string
+    PostFeedsFeedidEntriesImportResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+    PutV1Feeds42Request:
+      type: object
+      properties:
+        title:
+          type: string
+        category_id:
+          type: integer
+        feed_url:
+          type: string
+        site_url:
+          type: string
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        crawler:
+          type: boolean
+        user_agent:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+    GetV1Feeds42EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
+    GetV1Feeds42Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        site_url:
+          type: string
+        feed_url:
+          type: string
+        checked_at:
+          type: string
+        etag_header:
+          type: string
+        last_modified_header:
+          type: string
+        parsing_error_message:
+          type: string
+        parsing_error_count:
+          type: integer
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        crawler:
+          type: boolean
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        user_agent:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+        category:
+          type: object
+        icon:
+          type: object

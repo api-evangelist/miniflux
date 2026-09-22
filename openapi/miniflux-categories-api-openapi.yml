@@ -1,0 +1,275 @@
+openapi: 3.2.0
+info:
+  title: Miniflux Categories API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 56 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Miniflux has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://miniflux.app/docs/api.html
+tags:
+- name: Categories
+paths:
+  /v1/categories:
+    get:
+      operationId: get_v1_categories
+      tags:
+      - Categories
+      summary: Get Categories
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1CategoriesResponse'
+    post:
+      operationId: post_v1_categories
+      tags:
+      - Categories
+      summary: Create Category
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1CategoriesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1CategoriesResponse'
+  /v1/categories/123:
+    put:
+      operationId: put_v1_categories_123
+      tags:
+      - Categories
+      summary: Update Category
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1Categories123Request'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV1Categories123Response'
+  /v1/categories/123/mark-all-as-read:
+    put:
+      operationId: put_v1_categories_123_mark_all_as_read
+      tags:
+      - Categories
+      summary: Mark Category Entries as Read
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/categories/123/refresh:
+    put:
+      operationId: put_v1_categories_123_refresh
+      tags:
+      - Categories
+      summary: Refresh Category Feeds
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+  /v1/categories/22/entries:
+    get:
+      operationId: get_v1_categories_22_entries
+      tags:
+      - Categories
+      summary: Get Category Entries
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Categories22EntriesResponse'
+  /v1/categories/40/feeds:
+    get:
+      operationId: get_v1_categories_40_feeds
+      tags:
+      - Categories
+      summary: Get Category Feeds
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1Categories40FeedsResponse'
+  /v1/categories/802:
+    delete:
+      operationId: delete_v1_categories_802
+      tags:
+      - Categories
+      summary: Delete Category
+      x-source: https://miniflux.app/docs/api.html
+      responses:
+        '200':
+          description: Success (status as documented)
+    put:
+      operationId: put_v1_categories_802
+      tags:
+      - Categories
+      summary: Update Category
+      x-source: https://miniflux.app/docs/api.html
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV1Categories802Request'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV1Categories802Response'
+components:
+  schemas:
+    PutV1Categories802Request:
+      type: object
+      properties:
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+    PostV1CategoriesResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+    PutV1Categories123Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+    GetV1CategoriesResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        user_id:
+          type: integer
+        id:
+          type: integer
+        hide_globally:
+          type: boolean
+        feed_count:
+          type: integer
+          description: optional when ?counts=true
+        total_unread:
+          type: integer
+          description: optional when ?counts=true
+    GetV1Categories40FeedsResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        site_url:
+          type: string
+        feed_url:
+          type: string
+        checked_at:
+          type: string
+        etag_header:
+          type: string
+        last_modified_header:
+          type: string
+        parsing_error_message:
+          type: string
+        parsing_error_count:
+          type: integer
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        crawler:
+          type: boolean
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        user_agent:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+        category:
+          type: object
+        icon:
+          type: object
+    PutV1Categories123Request:
+      type: object
+      properties:
+        hide_globally:
+          type: boolean
+    GetV1Categories22EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
+    PutV1Categories802Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+    PostV1CategoriesRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+      required:
+      - title

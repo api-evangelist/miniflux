@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/miniflux/main/json-schema/miniflux-put-v1-entries-entryid-response-schema.json",
+  "title": "PutV1EntriesEntryidResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/miniflux-openapi-generated.yml#/components/schemas/PutV1EntriesEntryidResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "feed_id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "comments_url": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "changed_at": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "share_code": {
+      "type": "string"
+    },
+    "starred": {
+      "type": "boolean"
+    },
+    "reading_time": {
+      "type": "integer"
+    },
+    "enclosures": {
+      "type": "array"
+    },
+    "feed": {
+      "type": "object"
+    },
+    "tags": {
+      "type": "array"
+    }
+  }
+}
