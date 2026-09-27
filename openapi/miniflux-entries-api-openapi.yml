@@ -151,69 +151,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PutV1EntriesEntryidRequest:
-      type: object
-      properties:
-        title:
-          type: string
-        content:
-          type: string
-    GetV1EntriesEntryidFetchContentResponse:
-      type: object
-      properties:
-        content:
-          type: string
-    GetV1Entries888Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        feed_id:
-          type: integer
-        title:
-          type: string
-        url:
-          type: string
-        comments_url:
-          type: string
-        author:
-          type: string
-        content:
-          type: string
-        hash:
-          type: string
-        published_at:
-          type: string
-        created_at:
-          type: string
-        status:
-          type: string
-        share_code:
-          type: string
-        starred:
-          type: boolean
-        reading_time:
-          type: integer
-        enclosures:
-          type: string
-        feed:
-          type: object
-    GetV1EntriesResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entries:
-          type: array
-    GetV1EntriesIdsResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entry_ids:
-          type: array
     PutV1EntriesRequest:
       type: object
       properties:
@@ -225,6 +162,13 @@ components:
           type: boolean
       required:
       - entry_ids
+    GetV1EntriesIdsResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entry_ids:
+          type: array
     PutV1EntriesEntryidResponse:
       type: object
       properties:
@@ -266,3 +210,59 @@ components:
           type: object
         tags:
           type: array
+    GetV1EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
+    PutV1EntriesEntryidRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+    GetV1Entries888Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        feed_id:
+          type: integer
+        title:
+          type: string
+        url:
+          type: string
+        comments_url:
+          type: string
+        author:
+          type: string
+        content:
+          type: string
+        hash:
+          type: string
+        published_at:
+          type: string
+        created_at:
+          type: string
+        status:
+          type: string
+        share_code:
+          type: string
+        starred:
+          type: boolean
+        reading_time:
+          type: integer
+        enclosures:
+          type: string
+        feed:
+          type: object
+    GetV1EntriesEntryidFetchContentResponse:
+      type: object
+      properties:
+        content:
+          type: string

@@ -128,6 +128,37 @@ components:
         users:
           type: array
           description: Array of user objects as defined in Get User response.
+    PutV1Users270Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
     PostV1UsersResponse:
       type: object
       properties:
@@ -160,70 +191,6 @@ components:
         last_login_at:
           type: string
           description: nullable
-    GetV1UsersFoobarResponse:
-      type: object
-      properties:
-        id:
-          type: integer
-        username:
-          type: string
-        is_admin:
-          type: boolean
-        theme:
-          type: string
-        language:
-          type: string
-        timezone:
-          type: string
-        entry_sorting_direction:
-          type: string
-        stylesheet:
-          type: string
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-        entries_per_page:
-          type: integer
-        keyboard_shortcuts:
-          type: boolean
-        show_reading_time:
-          type: boolean
-        entry_swipe:
-          type: boolean
-        last_login_at:
-          type: string
-    PutV1Users270Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        username:
-          type: string
-        theme:
-          type: string
-        language:
-          type: string
-        timezone:
-          type: string
-        entry_sorting_direction:
-          type: string
-        stylesheet:
-          type: string
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-        entries_per_page:
-          type: integer
-        keyboard_shortcuts:
-          type: boolean
-        show_reading_time:
-          type: boolean
-        entry_swipe:
-          type: boolean
-        last_login_at:
-          type: string
     PutV1Users270Request:
       type: object
       properties:
@@ -255,6 +222,22 @@ components:
           type: boolean
         entry_swipe:
           type: boolean
+    PostV1UsersRequest:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        is_admin:
+          type: boolean
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+      required:
+      - username
+      - password
     GetV1Users270Response:
       type: object
       properties:
@@ -288,19 +271,36 @@ components:
           type: boolean
         last_login_at:
           type: string
-    PostV1UsersRequest:
+    GetV1UsersFoobarResponse:
       type: object
       properties:
+        id:
+          type: integer
         username:
-          type: string
-        password:
           type: string
         is_admin:
           type: boolean
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
         google_id:
           type: string
         openid_connect_id:
           type: string
-      required:
-      - username
-      - password
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string

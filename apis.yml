@@ -13,7 +13,7 @@ created: '2026-09-21'
 modified: '2026-09-21'
 tags:
 - Feed Reader
-- Open-Source
+- Open Source
 - Self-Hosted
 - Minimalist
 - Privacy
@@ -23,6 +23,7 @@ tags_raw:
 - Self-Hosted
 - Minimalist
 - Privacy
+- Open-Source
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -67,6 +68,8 @@ apis:
   description: The Api Keys API from Miniflux — 2 operation(s) for api keys.
   humanURL: https://miniflux.app/docs/api.html
   tags:
+  - APIKeys
+  tags_raw:
   - Api Keys
   properties:
   - type: OpenAPI
@@ -114,6 +117,8 @@ apis:
   description: The Feeds API from Miniflux — 5 operation(s) for feeds.
   humanURL: https://miniflux.app/docs/api.html
   tags:
+  - Feed
+  tags_raw:
   - Feeds
   properties:
   - type: OpenAPI
@@ -144,6 +149,8 @@ apis:
   description: The Integrations API from Miniflux — 1 operation(s) for integrations.
   humanURL: https://miniflux.app/docs/api.html
   tags:
+  - Integration
+  tags_raw:
   - Integrations
   properties:
   - type: OpenAPI
@@ -180,6 +187,8 @@ apis:
   description: The Users API from Miniflux — 4 operation(s) for users.
   humanURL: https://miniflux.app/docs/api.html
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI

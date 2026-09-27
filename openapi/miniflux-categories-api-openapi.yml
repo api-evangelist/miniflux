@@ -146,6 +146,17 @@ paths:
                 $ref: '#/components/schemas/PutV1Categories802Response'
 components:
   schemas:
+    PutV1Categories123Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        hide_globally:
+          type: boolean
     PutV1Categories802Request:
       type: object
       properties:
@@ -164,34 +175,6 @@ components:
           type: string
         hide_globally:
           type: boolean
-    PutV1Categories123Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        title:
-          type: string
-        hide_globally:
-          type: boolean
-    GetV1CategoriesResponse:
-      type: object
-      properties:
-        title:
-          type: string
-        user_id:
-          type: integer
-        id:
-          type: integer
-        hide_globally:
-          type: boolean
-        feed_count:
-          type: integer
-          description: optional when ?counts=true
-        total_unread:
-          type: integer
-          description: optional when ?counts=true
     GetV1Categories40FeedsResponse:
       type: object
       properties:
@@ -273,3 +256,20 @@ components:
           type: boolean
       required:
       - title
+    GetV1CategoriesResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        user_id:
+          type: integer
+        id:
+          type: integer
+        hide_globally:
+          type: boolean
+        feed_count:
+          type: integer
+          description: optional when ?counts=true
+        total_unread:
+          type: integer
+          description: optional when ?counts=true

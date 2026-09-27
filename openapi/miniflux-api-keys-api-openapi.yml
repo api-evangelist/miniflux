@@ -61,12 +61,6 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    GetV1ApiKeysResponse:
-      type: object
-      properties:
-        api_keys:
-          type: array
-          description: Array of API key objects with id, user_id, description, token, created_at, last_used_at.
     PostV1ApiKeysRequest:
       type: object
       properties:
@@ -89,3 +83,9 @@ components:
           type: string
         last_used_at:
           type: string
+    GetV1ApiKeysResponse:
+      type: object
+      properties:
+        api_keys:
+          type: array
+          description: Array of API key objects with id, user_id, description, token, created_at, last_used_at.

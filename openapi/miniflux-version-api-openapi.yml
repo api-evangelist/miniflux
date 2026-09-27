@@ -44,12 +44,6 @@ paths:
                 $ref: '#/components/schemas/GetVersionResponse'
 components:
   schemas:
-    GetVersionResponse:
-      type: object
-      properties:
-        body:
-          type: string
-          description: 2.0.22
     GetV1VersionResponse:
       type: object
       properties:
@@ -67,3 +61,9 @@ components:
           type: string
         os:
           type: string
+    GetVersionResponse:
+      type: object
+      properties:
+        body:
+          type: string
+          description: 2.0.22
