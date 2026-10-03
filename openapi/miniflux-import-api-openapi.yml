@@ -36,11 +36,6 @@ paths:
                 $ref: '#/components/schemas/PostV1ImportResponse'
 components:
   schemas:
-    PostV1ImportResponse:
-      type: object
-      properties:
-        message:
-          type: string
     PostV1ImportRequest:
       type: object
       properties:
@@ -49,3 +44,8 @@ components:
           description: OPML file
       required:
       - body
+    PostV1ImportResponse:
+      type: object
+      properties:
+        message:
+          type: string

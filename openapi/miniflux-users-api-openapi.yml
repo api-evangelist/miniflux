@@ -122,122 +122,6 @@ paths:
                 $ref: '#/components/schemas/GetV1UsersFoobarResponse'
 components:
   schemas:
-    GetV1UsersResponse:
-      type: object
-      properties:
-        users:
-          type: array
-          description: Array of user objects as defined in Get User response.
-    PutV1Users270Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        username:
-          type: string
-        theme:
-          type: string
-        language:
-          type: string
-        timezone:
-          type: string
-        entry_sorting_direction:
-          type: string
-        stylesheet:
-          type: string
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-        entries_per_page:
-          type: integer
-        keyboard_shortcuts:
-          type: boolean
-        show_reading_time:
-          type: boolean
-        entry_swipe:
-          type: boolean
-        last_login_at:
-          type: string
-    PostV1UsersResponse:
-      type: object
-      properties:
-        id:
-          type: integer
-        username:
-          type: string
-        theme:
-          type: string
-        language:
-          type: string
-        timezone:
-          type: string
-        entry_sorting_direction:
-          type: string
-        stylesheet:
-          type: string
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-        entries_per_page:
-          type: integer
-        keyboard_shortcuts:
-          type: boolean
-        show_reading_time:
-          type: boolean
-        entry_swipe:
-          type: boolean
-        last_login_at:
-          type: string
-          description: nullable
-    PutV1Users270Request:
-      type: object
-      properties:
-        username:
-          type: string
-        password:
-          type: string
-        theme:
-          type: string
-        language:
-          type: string
-        timezone:
-          type: string
-        entry_sorting_direction:
-          type: string
-        stylesheet:
-          type: string
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-        entries_per_page:
-          type: integer
-        is_admin:
-          type: boolean
-        keyboard_shortcuts:
-          type: boolean
-        show_reading_time:
-          type: boolean
-        entry_swipe:
-          type: boolean
-    PostV1UsersRequest:
-      type: object
-      properties:
-        username:
-          type: string
-        password:
-          type: string
-        is_admin:
-          type: boolean
-        google_id:
-          type: string
-        openid_connect_id:
-          type: string
-      required:
-      - username
-      - password
     GetV1Users270Response:
       type: object
       properties:
@@ -304,3 +188,119 @@ components:
           type: boolean
         last_login_at:
           type: string
+    PostV1UsersResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+          description: nullable
+    GetV1UsersResponse:
+      type: object
+      properties:
+        users:
+          type: array
+          description: Array of user objects as defined in Get User response.
+    PutV1Users270Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean
+        last_login_at:
+          type: string
+    PostV1UsersRequest:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        is_admin:
+          type: boolean
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+      required:
+      - username
+      - password
+    PutV1Users270Request:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        theme:
+          type: string
+        language:
+          type: string
+        timezone:
+          type: string
+        entry_sorting_direction:
+          type: string
+        stylesheet:
+          type: string
+        google_id:
+          type: string
+        openid_connect_id:
+          type: string
+        entries_per_page:
+          type: integer
+        is_admin:
+          type: boolean
+        keyboard_shortcuts:
+          type: boolean
+        show_reading_time:
+          type: boolean
+        entry_swipe:
+          type: boolean

@@ -57,6 +57,13 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
+    PutV1EnclosuresEnclosureidRequest:
+      type: object
+      properties:
+        media_progression:
+          type: integer
+      required:
+      - media_progression
     GetV1EnclosuresEnclosureidResponse:
       type: object
       properties:
@@ -74,10 +81,3 @@ components:
           type: integer
         media_progression:
           type: integer
-    PutV1EnclosuresEnclosureidRequest:
-      type: object
-      properties:
-        media_progression:
-          type: integer
-      required:
-      - media_progression

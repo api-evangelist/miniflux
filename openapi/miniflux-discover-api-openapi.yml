@@ -36,15 +36,6 @@ paths:
                 $ref: '#/components/schemas/PostV1DiscoverResponse'
 components:
   schemas:
-    PostV1DiscoverResponse:
-      type: object
-      properties:
-        url:
-          type: string
-        title:
-          type: string
-        type:
-          type: string
     PostV1DiscoverRequest:
       type: object
       properties:
@@ -60,3 +51,12 @@ components:
           type: boolean
       required:
       - url
+    PostV1DiscoverResponse:
+      type: object
+      properties:
+        url:
+          type: string
+        title:
+          type: string
+        type:
+          type: string

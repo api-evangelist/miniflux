@@ -146,15 +146,9 @@ paths:
                 $ref: '#/components/schemas/PutV1Categories802Response'
 components:
   schemas:
-    PutV1Categories123Response:
+    PutV1Categories123Request:
       type: object
       properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        title:
-          type: string
         hide_globally:
           type: boolean
     PutV1Categories802Request:
@@ -164,7 +158,24 @@ components:
           type: string
         hide_globally:
           type: boolean
-    PostV1CategoriesResponse:
+    GetV1CategoriesResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        user_id:
+          type: integer
+        id:
+          type: integer
+        hide_globally:
+          type: boolean
+        feed_count:
+          type: integer
+          description: optional when ?counts=true
+        total_unread:
+          type: integer
+          description: optional when ?counts=true
+    PutV1Categories123Response:
       type: object
       properties:
         id:
@@ -224,18 +235,6 @@ components:
           type: object
         icon:
           type: object
-    PutV1Categories123Request:
-      type: object
-      properties:
-        hide_globally:
-          type: boolean
-    GetV1Categories22EntriesResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entries:
-          type: array
     PutV1Categories802Response:
       type: object
       properties:
@@ -247,6 +246,13 @@ components:
           type: string
         hide_globally:
           type: boolean
+    GetV1Categories22EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
     PostV1CategoriesRequest:
       type: object
       properties:
@@ -256,20 +262,14 @@ components:
           type: boolean
       required:
       - title
-    GetV1CategoriesResponse:
+    PostV1CategoriesResponse:
       type: object
       properties:
-        title:
-          type: string
-        user_id:
-          type: integer
         id:
           type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
         hide_globally:
           type: boolean
-        feed_count:
-          type: integer
-          description: optional when ?counts=true
-        total_unread:
-          type: integer
-          description: optional when ?counts=true

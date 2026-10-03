@@ -151,24 +151,11 @@ paths:
           description: Success (status as documented)
 components:
   schemas:
-    PutV1EntriesRequest:
+    GetV1EntriesEntryidFetchContentResponse:
       type: object
       properties:
-        entry_ids:
-          type: array
-        status:
+        content:
           type: string
-        starred:
-          type: boolean
-      required:
-      - entry_ids
-    GetV1EntriesIdsResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entry_ids:
-          type: array
     PutV1EntriesEntryidResponse:
       type: object
       properties:
@@ -210,20 +197,6 @@ components:
           type: object
         tags:
           type: array
-    GetV1EntriesResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entries:
-          type: array
-    PutV1EntriesEntryidRequest:
-      type: object
-      properties:
-        title:
-          type: string
-        content:
-          type: string
     GetV1Entries888Response:
       type: object
       properties:
@@ -261,8 +234,35 @@ components:
           type: string
         feed:
           type: object
-    GetV1EntriesEntryidFetchContentResponse:
+    GetV1EntriesIdsResponse:
       type: object
       properties:
+        total:
+          type: integer
+        entry_ids:
+          type: array
+    PutV1EntriesEntryidRequest:
+      type: object
+      properties:
+        title:
+          type: string
         content:
           type: string
+    PutV1EntriesRequest:
+      type: object
+      properties:
+        entry_ids:
+          type: array
+        status:
+          type: string
+        starred:
+          type: boolean
+      required:
+      - entry_ids
+    GetV1EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
