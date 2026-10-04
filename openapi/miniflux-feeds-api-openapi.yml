@@ -210,6 +210,18 @@ paths:
                 $ref: '#/components/schemas/GetV1FeedsFeedidIconResponse'
 components:
   schemas:
+    PostFeedsFeedidEntriesImportResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+    GetV1Feeds42EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
     PutV1Feeds42Response:
       type: object
       properties:
@@ -264,43 +276,6 @@ components:
       properties:
         feed_id:
           type: integer
-    GetV1Feeds42Entries888Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        feed_id:
-          type: integer
-        title:
-          type: string
-        url:
-          type: string
-        comments_url:
-          type: string
-        author:
-          type: string
-        content:
-          type: string
-        hash:
-          type: string
-        published_at:
-          type: string
-        created_at:
-          type: string
-        status:
-          type: string
-        share_code:
-          type: string
-        starred:
-          type: boolean
-        reading_time:
-          type: integer
-        enclosures:
-          type: string
-        feed:
-          type: object
     GetV1Feeds42Response:
       type: object
       properties:
@@ -350,22 +325,6 @@ components:
           type: object
         icon:
           type: object
-    GetV1Feeds42EntriesResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entries:
-          type: array
-    GetV1FeedsFeedidIconResponse:
-      type: object
-      properties:
-        id:
-          type: integer
-        data:
-          type: string
-        mime_type:
-          type: string
     GetV1FeedsResponse:
       type: object
       properties:
@@ -415,11 +374,71 @@ components:
           type: object
         icon:
           type: object
-    PostFeedsFeedidEntriesImportResponse:
+    PostV1FeedsRequest:
+      type: object
+      properties:
+        feed_url:
+          type: string
+        category_id:
+          type: integer
+        username:
+          type: string
+        password:
+          type: string
+        crawler:
+          type: boolean
+        user_agent:
+          type: string
+        scraper_rules:
+          type: string
+        rewrite_rules:
+          type: string
+        blocklist_rules:
+          type: string
+        keeplist_rules:
+          type: string
+        disabled:
+          type: boolean
+        ignore_http_cache:
+          type: boolean
+        fetch_via_proxy:
+          type: boolean
+      required:
+      - feed_url
+    PostFeedsFeedidEntriesImportRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        author:
+          type: string
+        content:
+          type: string
+        published_at:
+          type: integer
+        status:
+          type: string
+        starred:
+          type: boolean
+        tags:
+          type: array
+        external_id:
+          type: string
+        comments_url:
+          type: string
+      required:
+      - url
+    GetV1FeedsFeedidIconResponse:
       type: object
       properties:
         id:
           type: integer
+        data:
+          type: string
+        mime_type:
+          type: string
     PutV1Feeds42Request:
       type: object
       properties:
@@ -453,37 +472,6 @@ components:
           type: boolean
         fetch_via_proxy:
           type: boolean
-    PostV1FeedsRequest:
-      type: object
-      properties:
-        feed_url:
-          type: string
-        category_id:
-          type: integer
-        username:
-          type: string
-        password:
-          type: string
-        crawler:
-          type: boolean
-        user_agent:
-          type: string
-        scraper_rules:
-          type: string
-        rewrite_rules:
-          type: string
-        blocklist_rules:
-          type: string
-        keeplist_rules:
-          type: string
-        disabled:
-          type: boolean
-        ignore_http_cache:
-          type: boolean
-        fetch_via_proxy:
-          type: boolean
-      required:
-      - feed_url
     GetV1FeedsCountersResponse:
       type: object
       properties:
@@ -493,28 +481,40 @@ components:
         unreads:
           type: object
           description: Map of feed ID to unread count
-    PostFeedsFeedidEntriesImportRequest:
+    GetV1Feeds42Entries888Response:
       type: object
       properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        feed_id:
+          type: integer
         title:
           type: string
         url:
+          type: string
+        comments_url:
           type: string
         author:
           type: string
         content:
           type: string
+        hash:
+          type: string
         published_at:
-          type: integer
+          type: string
+        created_at:
+          type: string
         status:
+          type: string
+        share_code:
           type: string
         starred:
           type: boolean
-        tags:
-          type: array
-        external_id:
+        reading_time:
+          type: integer
+        enclosures:
           type: string
-        comments_url:
-          type: string
-      required:
-      - url
+        feed:
+          type: object

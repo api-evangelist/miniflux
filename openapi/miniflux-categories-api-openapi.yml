@@ -151,13 +151,24 @@ components:
       properties:
         hide_globally:
           type: boolean
-    PutV1Categories802Request:
+    PutV1Categories123Response:
       type: object
       properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
         title:
           type: string
         hide_globally:
           type: boolean
+    GetV1Categories22EntriesResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+        entries:
+          type: array
     GetV1CategoriesResponse:
       type: object
       properties:
@@ -175,17 +186,6 @@ components:
         total_unread:
           type: integer
           description: optional when ?counts=true
-    PutV1Categories123Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        title:
-          type: string
-        hide_globally:
-          type: boolean
     GetV1Categories40FeedsResponse:
       type: object
       properties:
@@ -235,33 +235,13 @@ components:
           type: object
         icon:
           type: object
-    PutV1Categories802Response:
-      type: object
-      properties:
-        id:
-          type: integer
-        user_id:
-          type: integer
-        title:
-          type: string
-        hide_globally:
-          type: boolean
-    GetV1Categories22EntriesResponse:
-      type: object
-      properties:
-        total:
-          type: integer
-        entries:
-          type: array
-    PostV1CategoriesRequest:
+    PutV1Categories802Request:
       type: object
       properties:
         title:
           type: string
         hide_globally:
           type: boolean
-      required:
-      - title
     PostV1CategoriesResponse:
       type: object
       properties:
@@ -273,3 +253,23 @@ components:
           type: string
         hide_globally:
           type: boolean
+    PutV1Categories802Response:
+      type: object
+      properties:
+        id:
+          type: integer
+        user_id:
+          type: integer
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+    PostV1CategoriesRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        hide_globally:
+          type: boolean
+      required:
+      - title
