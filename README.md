@@ -64,5 +64,144 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Miniflux is a company surfaced via the API Evangelist harvest backlog (source: news) and added to the network as a stub for full-pipeline profiling.
-- https://miniflux.app/
+Miniflux is an open-source minimalist feed reader focused on simplicity and privacy. It provides a clean web interface, supports self‑hosting via binary, Docker, or packages, and offers a RESTful API for managing feeds, entries, categories, and users. The project emphasizes readability, low resource usage, and no telemetry, making it suitable for personal and small‑team use.
+
+**Areas:** Feed Reader · Open Source · Self-Hosted · Minimalist · Privacy
+
+## Miniflux on APIs.io
+
+Everything profiled for Miniflux is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/miniflux/](https://apis.io/providers/miniflux/)** — or go straight to one of the APIs or properties below.
+
+### APIs (19)
+
+- [Miniflux Api Keys API](https://apis.io/apis/miniflux/miniflux-api-keys-api/) — The Api Keys API from Miniflux — 2 operation(s) for api keys.
+- [Miniflux Categories API](https://apis.io/apis/miniflux/miniflux-categories-api/) — The Categories API from Miniflux — 6 operation(s) for categories.
+- [Miniflux Enclosures API](https://apis.io/apis/miniflux/miniflux-enclosures-api/) — The Enclosures API from Miniflux — 1 operation(s) for enclosures.
+- [Miniflux Entries API](https://apis.io/apis/miniflux/miniflux-entries-api/) — The Entries API from Miniflux — 7 operation(s) for entries.
+- [Miniflux Export API](https://apis.io/apis/miniflux/miniflux-export-api/) — The Export API from Miniflux — 1 operation(s) for export.
+- [Miniflux Feeds API](https://apis.io/apis/miniflux/miniflux-feeds-api/) — The Feeds API from Miniflux — 5 operation(s) for feeds.
+- [Miniflux Import API](https://apis.io/apis/miniflux/miniflux-import-api/) — The Import API from Miniflux — 1 operation(s) for import.
+- [Miniflux Integrations API](https://apis.io/apis/miniflux/miniflux-integrations-api/) — The Integrations API from Miniflux — 1 operation(s) for integrations.
+- [Miniflux Liveness API](https://apis.io/apis/miniflux/miniflux-liveness-api/) — The Liveness API from Miniflux — 1 operation(s) for liveness.
+- [Miniflux Me API](https://apis.io/apis/miniflux/miniflux-me-api/) — The Me API from Miniflux — 1 operation(s) for me.
+- [Miniflux Readiness API](https://apis.io/apis/miniflux/miniflux-readiness-api/) — The Readiness API from Miniflux — 1 operation(s) for readiness.
+- [Miniflux Users API](https://apis.io/apis/miniflux/miniflux-users-api/) — The Users API from Miniflux — 4 operation(s) for users.
+- [Miniflux Version API](https://apis.io/apis/miniflux/miniflux-version-api/) — The Version API from Miniflux — 2 operation(s) for version.
+- [Miniflux Discover API](https://apis.io/apis/miniflux/miniflux-discover-api/) — The Discover API from Miniflux — 1 operation(s) for discover.
+- [Miniflux Flush History API](https://apis.io/apis/miniflux/miniflux-flush-history-api/) — The Flush History API from Miniflux — 1 operation(s) for flush history.
+- [Miniflux Healthz API](https://apis.io/apis/miniflux/miniflux-healthz-api/) — The Healthz API from Miniflux — 1 operation(s) for healthz.
+- [Miniflux Icons API](https://apis.io/apis/miniflux/miniflux-icons-api/) — The Icons API from Miniflux — 1 operation(s) for icons.
+- [Miniflux Readyz API](https://apis.io/apis/miniflux/miniflux-readyz-api/) — The Readyz API from Miniflux — 1 operation(s) for readyz.
+- [Miniflux Health Check API](https://apis.io/apis/miniflux/miniflux-health-check-api/) — The Health Check API from Miniflux — 1 operation(s) for health check.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [miniflux-mcp.yml](https://apis.io/servers/miniflux/miniflux-mcp-yml/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Miniflux Agentic Access](https://apis.io/agentic-access/miniflux/miniflux-agentic-access/)
+
+#### JSON Schema (9)
+
+The data models the API reads and writes.
+
+- [GetV1Categories40FeedsResponse](https://apis.io/schemas/miniflux/miniflux-get-v1-categories40-feeds-response/)
+- [GetV1FeedsFeedidIconResponse](https://apis.io/schemas/miniflux/miniflux-get-v1-feeds-feedid-icon-response/)
+- [GetV1FeedsResponse](https://apis.io/schemas/miniflux/miniflux-get-v1-feeds-response/)
+- [GetV1Feeds42Response](https://apis.io/schemas/miniflux/miniflux-get-v1-feeds42-response/)
+- [GetV1MeResponse](https://apis.io/schemas/miniflux/miniflux-get-v1-me-response/)
+- [PostV1FeedsRequest](https://apis.io/schemas/miniflux/miniflux-post-v1-feeds-request/)
+- [PutV1EntriesEntryidResponse](https://apis.io/schemas/miniflux/miniflux-put-v1-entries-entryid-response/)
+- [PutV1Feeds42Request](https://apis.io/schemas/miniflux/miniflux-put-v1-feeds42-request/)
+- [PutV1Feeds42Response](https://apis.io/schemas/miniflux/miniflux-put-v1-feeds42-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Miniflux Context](https://apis.io/jsonld/miniflux/miniflux-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Miniflux API Rules](https://apis.io/rules/miniflux/miniflux-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Miniflux Domain Security](https://apis.io/security/miniflux/miniflux-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://miniflux.app/)
+- [Documentation](https://miniflux.app/docs/)
+- [Getting started](https://miniflux.app/docs/installation.html)
+- [API reference](https://miniflux.app/docs/api.html)
+- [Support](https://github.com/miniflux/v2/issues)
+- [GitHub](https://github.com/miniflux)
+
+## API Evangelist rating
+
+**Kin Score 24.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.9 |
+| Contract quality | 23.2 |
+| Contract governance | 22.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 0.0 |
+
+**Agent readiness 14.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/miniflux/](https://apis.io/providers/miniflux/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Miniflux: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/miniflux/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
